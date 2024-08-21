@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/be51ebd152.js" crossorigin="anonymous"></script>
+</head>
+
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li> <a href="home.html">Home</a></li>
+                    <li> <a href="about.html">About</a></li>
+                    <li> <a href="services.html">Services</a></li>
+                    <li> <a href="portfolio.html">Portfolio</a></li>
+                    <li> <a href="contact.html">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Web and Mobile App. Development</p>
+                <h1>Hi, I'm <span>Senay</span> from Canada</h1>
+            </div>
+        </div>
+        
+    </div>
+
+
+    
+        <h1>Elapsed Time</h1>
+        <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate">
+        <button onclick="calculateElapsedTime()">Calculate</button>
+        <p id="elapsedTime"></p>
+    
+        <script>
+            function calculateElapsedTime() {
+               
+                const startDateString = document.getElementById("startDate").value;
+                const startDate = new Date(startDateString);
+    
+              
+                const currentDate = new Date();
+    
+                const elapsedTime = currentDate - startDate;
+    
+                const days = Math.floor(elapsedTime / (1000 * 60 * 60 * 24));
+                const months = Math.floor(days / 30); 
+                const years = Math.floor(months / 12);
+    
+                const elapsedTimeMessage = `The passing time: ${years} year, ${months % 12} month, ${days % 30} day`;
+                document.getElementById("elapsedTime").innerText = elapsedTimeMessage;
+            }
+        </script>
+    
+    <div class="copyright">
+        <p>Copyright 2024 Senay Kula. Made with <i class="fa-solid fa-heart"></i> for CDI College Final Project</p>
+
+    </div>
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+    
+</body>
+</html>

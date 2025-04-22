@@ -3,5 +3,7 @@ The site includes information about my experience, services, and projects, as we
 
 
 
-https://github.com/user-attachments/assets/95f36bfe-fa1e-49f5-9c39-acd0762c0370
+
+
+https://github.com/user-attachments/assets/4f4335d0-59da-4206-81a5-ab15eb4891c7
 
